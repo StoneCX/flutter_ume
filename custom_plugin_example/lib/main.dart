@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'UME Demo Home Page'),
+      home: MyHomePage(title: 'UME Test Page'),
     );
   }
 }
@@ -32,14 +32,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   bool _hasTapped = false;
-
-  void _incrementCounter() {
-    CustomLog.log('Increase $_counter times.');
-    setState(() {
-      _hasTapped = true;
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,21 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
               alignment: Alignment.bottomRight,
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Text(
-                      _hasTapped
-                          ? 'Open \nCustomLog \nto view log'
-                          : 'Tap here 👉',
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
-                    SizedBox(width: 80)
-                  ])),
+                  children: <Widget>[])),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ),
     );
   }
